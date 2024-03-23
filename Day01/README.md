@@ -27,10 +27,10 @@
 ```
 
 #### Demo
-1. 非引入式的script會先執行，畫面文字都看不到: [demo](./renderOrder03.html)
-> 解決辦法：使用window.onload或是其他前端框架api(如jQuery中的ready()): [demo](./renderOrder04.html)
-2. 引入式script放在HTML程式碼***之前***，會先執行JS腳本: [demo](./renderOrder01.html)
-3. 引入式script放在HTML程式碼***之後***，會先顯示畫面文字: [demo](./renderOrder02.html)
+1. 非引入式的script會先執行，畫面文字都看不到: [demo](https://iamlaurenwang.github.io/js30Demo/Day01/renderOrder03.html)
+> 解決辦法：使用window.onload或是其他前端框架api(如jQuery中的ready()): [demo](https://iamlaurenwang.github.io/js30Demo/Day01/renderOrder04.html)
+2. 引入式script放在HTML程式碼***之前***，會先執行JS腳本: [demo](https://iamlaurenwang.github.io/js30Demo/Day01/renderOrder01.html)
+3. 引入式script放在HTML程式碼***之後***，會先顯示畫面文字: [demo](https://iamlaurenwang.github.io/js30Demo/Day01/renderOrder02.html)
 
 
 # event.target
