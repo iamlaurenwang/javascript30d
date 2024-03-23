@@ -3,3 +3,14 @@
 
 ### Day0: 事前準備
 在開始前需要擬定每天學習主題，若有餘裕再搭配上刷題
+
+### Day1: 
+
+
+# 資源
+1. 前端面試題: https://namewjp.github.io/Front-end-interview/js.html#prototype-%E5%92%8C-proto-%E7%9A%84%E5%85%B3%E7%B3%BB%E6%98%AF%E4%BB%80%E4%B9%88
+2. Explain this: https://www.explainthis.io/zh-hant/swe-questions/frontend
+3. JavaScript基本功修煉: https://ithelp.ithome.com.tw/users/20128534/ironman/3460
+4. MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+5. 前端30: https://medium.com/schaoss-blog/front-end-30-summary-931d8655d054
+6. JavaScript Programming Examples: https://www.geeksforgeeks.org/javascript-examples/?ref=shm#javascript-es6-examples
