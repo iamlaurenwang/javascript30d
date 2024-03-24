@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e.target vs vs e.currentTarget
+    </title>
+    <style>
+        #outer{
+            width: 300px;
+            height: 50px;
+            background-color: antiquewhite;
+            border: 1px solid;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #inner{
+            width: 200px;
+            height: 40px;
+            background-color: aquamarine;
+            border: 1px solid;
+            padding: 3px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <strong></strong>
+    <div id="outer">
+        <div id="inner">
+            Click me!
+        </div>
+    </div>
+    <script>
+        document.getElementById("outer").addEventListener("click", function (e) {
+            console.log("Current target:", e.currentTarget.id);
+            console.log("Target:", e.target.id);
+        });
+
+        document.getElementById("inner").addEventListener("click", function (e) {
+            console.log("Current target:", e.currentTarget.id);
+            console.log("Target:", e.target.id);
+        });
+
+    </script>
+</body>
+
+</html>

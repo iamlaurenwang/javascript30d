@@ -17,14 +17,3 @@
 6. JavaScript Programming Examples: https://www.geeksforgeeks.org/javascript-examples/?ref=shm#javascript-es6-examples
 7. MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
-
-
-###### TODOs
-- event.target
-- window
-- document
-- JS engine
-- Ｍemory Heap https://medium.com/walkout/%E6%B7%BA%E6%B7%A1-js-engine-%E6%A9%9F%E5%88%B6-77391b4dd3db
-- Call Stack
-- FIFO, LIFO
-- 型別

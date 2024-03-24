@@ -53,10 +53,115 @@ function promptUser() {
 
 - 如果攻擊者點擊“輸入姓名”按鈕，並輸入以下內容：`<script>alert("XSS 攻擊成功！");</script>`
 
-
 - 為了防止 XSS 攻擊，可以使用以下措施：
     1. 對使用者輸入進行驗證
     2. 使用輸出編碼
     3. [使用 HTTP 內容安全策略 (CSP)](https://www.tsg.com.tw/blog-detail10-317-0-content-security-policy.htm)
         > 　簡單來說，CSP 是瀏覽器提供設定白名單的機制，網站會告訴瀏覽器那些網頁的哪些位置可以連、哪些位置不能連，並且目前大部分的瀏覽器都能支援 CSP。
+
+## document
+在 Web 開發中，window.document 是指當前窗口中的 HTML 文檔。它是一個 DOM 對象，代表整個 HTML 文檔的結構和內容。
+
+
+### DOM: tree structure
+Node(節點)有四種
+- element
+- text
+- attribute
+- document
+
+
+## Event
+BOM & DOM都有event，如上述BOM是針對瀏覽器視窗而DOM則是當前文件，而我真正想深入了解的事DOM event
+
+### BOM 事件
+BOM 事件是指發生在瀏覽器窗口或框架中的事件。它們與特定的 HTML 元素無關，而是與整個瀏覽器窗口或框架相關。
+
+常見的 BOM 事件包括：
+
+load：當瀏覽器完成加載網頁時觸發。
+resize：當瀏覽器窗口或框架的大小發生更改時觸發。
+scroll：當瀏覽器窗口或框架中的內容被滾動時觸發。
+unload：當瀏覽器窗口或框架被關閉時觸發。
+### DOM 事件
+DOM 事件是指發生在 HTML 元素中的事件。它們與特定的 HTML 元素相關，例如按鈕、輸入框或圖像。
+
+常見的 DOM 事件包括：
+
+click：當用戶單擊 HTML 元素時觸發。
+mouseover：當用戶的鼠標懸停在 HTML 元素上時觸發。
+mouseout：當用戶的鼠標離開 HTML 元素時觸發。
+keydown：當用戶按下鍵盤上的鍵時觸發。
+keyup：當用戶鬆開鍵盤上的鍵時觸發。
+
+
+# Event Object
+所有的事件都是根據event object
+事件也分為好幾類
+
+| Object              | Handles                                    |
+|---------------------|--------------------------------------------|
+| AnimationEvent      | CSS animations                             |
+| ClipboardEvent      | Modification of the clipboard              |
+| DragEvent           | Drag and drop interaction                  |
+| FocusEvent          | Focus-related events                       |
+| HashChangeEvent     | Changes in the anchor part of an URL       |
+| InputEvent          | User input                                 |
+| KeyboardEvent       | Keyboard interaction                       |
+| MouseEvent          | Mouse interaction                          |
+| PageTransitionEvent | Navigation between web pages               |
+| PopStateEvent       | Changes in the page history                |
+| ProgressEvent       | The progress of loading external files     |
+| StorageEvent        | Changes in the Web Storage                 |
+| TouchEvent          | Touch interaction                          |
+| TransitionEvent     | CSS transitions                            |
+| UiEvent             | User interface interaction                |
+| WheelEvent          | Mouse-wheel interaction                    |
+
+
+> 事件列表可以參考這裡：https://www.w3schools.com/jsref/obj_events.asp
+
+## Event Properties and Methods
+
+- Properties: 
+    - bubbles: Returns whether or not a specific event is a bubbling event
+    `event.bubbles //true or false`
+    - target: returns the element where the event occured.
+    > 返回觸發事件的元素，例如: `<button>This is a button</button>`
+    - type: Return the type of event that was triggered
+- Methods:
+    - stopPropagation(): 終止冒泡事件
+        - [w3schools Demo](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_stoppropagation)
+
+    - preventDefault(): 取消預設觸發行為
+        - [w3schools Demo](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_defaultprevented)
+
+### event.target
+event.target已經是返回html element了，因此可以直接存取與修改元素的屬性
+**例如：修改文件顏色**
+```
+<button style="color:blue" onclick="changeColor()">BUTTON</button>
+
+<script>
+function changeColor(){
+    event.target.style.color = "red"
+}
+</script>
+```
+
+
+#### 補充01: event.target vs event.currentTarget
+- Event.target: 返回觸發事件的element
+- Event.currentTarget: 返回綁定事件監聽的element
+[Demo: target v.s. currentTarget](./eventTargetDemo.html)
+
+**預期結果**
+1. 點outer: target返回outer; currentTarget返回outer
+2. 點inner: target返回inner; currentTarget會返回outer & inner
+
+
+#### 補充02: 冒泡事件 Event Bubbling 與 捕獲事件 Event Capturing
+reference: https://www.explainthis.io/zh-hant/swe/fe-event-delegation-capture-bubble
+
+
 
