@@ -161,7 +161,30 @@ function changeColor(){
 
 
 #### 補充02: 冒泡事件 Event Bubbling 與 捕獲事件 Event Capturing
-reference: https://www.explainthis.io/zh-hant/swe/fe-event-delegation-capture-bubble
+- The capture phase: 由上至下，在Document的最上層開始直到最後觸發事件的根元素
+    ![Capture Phase](http://www.java2s.com/Book/JavaScriptImages/eventCapture.png)
+- The target phase
+- The bubbling phase: 由下至上，就像是泡泡一樣，會從觸發事件的根元素開始
+    ![Bubble Phase](http://www.java2s.com/Book/JavaScriptImages/eventBubble.png)
 
+![Events-phases](https://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107/images/eventflow.png)
+
+##### 事件冒泡＆事件捕獲在開發上可能造成什麼問題？
+1. 意外觸發事件
+    - 由於事件冒泡的特性，如果在父元素上綁定了事件處理程序，那麼子元素觸發的事件也會觸發父元素的事件處理程序。這可能會導致意外觸發事件，造成不必要的麻煩。
+        - 例如，在一個網頁中，有一個按鈕用於提交表單。如果在表單元素上綁定了 submit 事件處理程序，那麼點擊按鈕會觸發表單的 submit 事件處理程序，從而提交表單。但是，如果在按鈕元素上也綁定了 submit 事件處理程序，那麼點擊按鈕也會觸發按鈕的 submit 事件處理程序，從而導致表單再次提交。
+
+2. 性能問題
+    - 由於事件冒泡的特性，事件會在 DOM 樹中逐層向上傳播。如果 DOM 樹很深，那麼事件傳播的過程會消耗一定的性能。
+3. 難以調試
+    - 由於事件冒泡和事件捕獲的特性，事件處理程序可能會被多次調用。這可能會導致難以調試事件處理程序。
+
+> stopPropagation(): 阻止冒泡事件，僅在target element執行function
+
+
+
+reference: 
+https://www.explainthis.io/zh-hant/swe/fe-event-delegation-capture-bubble
+https://ithelp.ithome.com.tw/articles/10265819
 
 
