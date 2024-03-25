@@ -1,11 +1,11 @@
 # JavaScript 30天
 希望藉由這三十天(2024/03/23~2024/04/23)，提升自己的基本功
 
-### Day0: 事前準備
-在開始前需要擬定每天學習主題，若有餘裕再搭配上刷題
-
+- Day0: 事前準備: 在開始前需要擬定每天學習主題，若有餘裕再搭配上刷題
 - Day1: JavaScript & 瀏覽器
-- Day2: window, document, event
+- Day2: window, document & event
+- Day3: queue and stack
+- Day4: 傳值＆傳址
 
 
 # 資源
