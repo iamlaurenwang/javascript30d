@@ -6,6 +6,7 @@
 - Day2: window, document & event
 - Day3: call stack and task queue
 - Day4: 傳值＆傳址、型別
+- Day5: Array陣列
 
 
 # 資源
