@@ -5,7 +5,7 @@
 - Day1: JavaScript & 瀏覽器
 - Day2: window, document & event
 - Day3: call stack and task queue
-- Day4: 傳值＆傳址
+- Day4: 傳值＆傳址、型別
 
 
 # 資源
