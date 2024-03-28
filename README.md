@@ -4,7 +4,7 @@
 - Day0: 事前準備: 在開始前需要擬定每天學習主題，若有餘裕再搭配上刷題
 - Day1: JavaScript & 瀏覽器
 - Day2: window, document & event
-- Day3: queue and stack
+- Day3: call stack and task queue
 - Day4: 傳值＆傳址
 
 
