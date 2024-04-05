@@ -169,3 +169,15 @@ const intervalId = setInterval(function() {
 - 關閉不使用的分頁和擴充功能
 - 更新瀏覽器到最新版本
 - 檢查系統是否有其他程式正在佔用大量記憶體
+
+## 傳值傳址
+```
+var a = 5;
+
+function changeValue(x) {
+  x = 10;
+}
+
+changeValue(a); //此行嘗試將值 10 指派給參數 x。但是，由於 JavaScript 使用傳值方式，因此此行只會更改傳遞給函式的 a 副本的值，而不是原始的 a 變數本身。
+console.log(a);
+```
