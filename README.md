@@ -9,6 +9,8 @@
 - Day5: Array陣列
 - Day6: Object陣列
 - Day7: This
+- Day8: Arrow Function箭頭函式
+- Day9: Prototype原型鍊
 
 # 資源
 1. 前端面試題: https://namewjp.github.io/Front-end-interview/js.html#prototype-%E5%92%8C-proto-%E7%9A%84%E5%85%B3%E7%B3%BB%E6%98%AF%E4%BB%80%E4%B9%88
