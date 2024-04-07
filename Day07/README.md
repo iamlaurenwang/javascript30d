@@ -98,7 +98,7 @@ console.log(obj.func()) // { name: "obj", func: [Function: func] }
 
 ### Overall
 | context | result |
-|---|---|---|
+|---|---|
 | Object中的一般function | Object本身 | 
 | 一般function | Global Window Object | 
 | DOM事件 | DOM元素 | 

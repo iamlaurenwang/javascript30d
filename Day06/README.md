@@ -214,3 +214,5 @@ TODO
 1. Object.assign
 2. Object constructor
 3. Object prototype
+JavaScript基本功修練：Day19 - 設定物件屬性裏的特徵: https://ithelp.ithome.com.tw/articles/10249020
+
